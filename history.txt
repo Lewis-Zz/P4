@@ -1,0 +1,20 @@
+  196  cd P4
+  197  git init
+  198  git branch -M main
+  199  git checkout -b main
+  200  git remote add origin https://github.com/Lewis-Zz/P4.git
+  201  git checkout -b feature
+  202  echo "hello world!" > README.md
+  203  git add .
+  204  git commit -m "add readme file"
+  205  git push -u origin feature
+  206  git checkout -b main
+  207  git add .
+  208  git commit -m "create main"
+  209  git push -u origin feature
+  210  git push -u origin main
+  211  git checkout main
+  212  git merge feature
+  213  git push -u origin main
+  214  git pull origin main
+  215  history | tail -n 20 >> history.txt
